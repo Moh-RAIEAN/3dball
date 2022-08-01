@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at 50% 35%, rgba(0, 0, 0,0) ,rgb(155 155 155 / 90%) 35%,rgb(106 104 104), rgb(54 54 54),rgb(7, 7, 7) 69%) , url(./images/portfolio.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: translate 1.5s linear infinite;
+}
+@keyframes translate {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    90%{
+        transform: translateY(0) scaleX(1);
+    }
+    100%{
+        transform: translateY(0) scaleX(1.02);
+     }
+}
+.shadow{
+    width: 15%;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    display: block;
+    top: 73%;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(13px);
+    animation: scale 1.5s linear infinite;
+}
+@keyframes scale {
+    0%{transform: translate(-50%) scale(1);
+        opacity: 1;
+    }
+    50%{transform: translate(-50%) scale(.3);
+        opacity: 0.3;
+ 
+    }
+    100%{transform: translate(-50%) scale(1);
+        opacity: 1;
+        filter: blur(15px);
+        scale:(5);
+    }
+}
+@keyframes fade{
+
+}
